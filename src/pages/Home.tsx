@@ -1,13 +1,16 @@
 import { Box, Container, Grid } from '@mui/material'
+import { NavBar, Hero, Projetos } from '@/components'
 
 function Home() {
   return (
     <>
+      <NavBar />
       <Box>
         <Grid container>
           <Grid>
             <Container>
-              <h1>Home</h1>
+              <Hero />
+              <Projetos />
             </Container>
           </Grid>
         </Grid>
