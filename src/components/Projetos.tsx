@@ -30,6 +30,7 @@ const DivProjetos = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 2em;
 `
+//Tipagem para repos
 interface Repo {
   id: number
   name: string
