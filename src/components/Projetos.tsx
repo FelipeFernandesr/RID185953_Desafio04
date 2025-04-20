@@ -30,9 +30,16 @@ const DivProjetos = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 2em;
 `
+interface Repo {
+  id: number
+  name: string
+  description: string | null
+  stargazers_count: number
+  html_url: string
+}
 
 function Projetos() {
-  const [repos, setRepos] = useState([])
+  const [repos, setRepos] = useState<Repo[]>([])
   const [carregando, setCarregando] = useState(true)
 
   useEffect(() => {
@@ -59,9 +66,8 @@ function Projetos() {
             <RepoCard key={repo.id}>
               <RepoName>{repo.name}</RepoName>
 
-              <p>{repo.description}</p>
+              <p>{repo.description || 'sem descrição disponivel'}</p>
               <small>⭐ {repo.stargazers_count}</small>
-              <a></a>
               <StyledButton
                 style={{
                   width: pxToRem(200),
@@ -69,8 +75,6 @@ function Projetos() {
                   height: pxToRem(60),
                 }}
                 onClick={() => window.open(repo.html_url, '_blank')}
-                target="_blank"
-                rel="noreferrer"
               >
                 Clique aqui
               </StyledButton>
