@@ -5,4 +5,5 @@ export interface Repo {
   description: string | null
   stargazers_count: number
   html_url: string
+  imageUrl: string
 }
