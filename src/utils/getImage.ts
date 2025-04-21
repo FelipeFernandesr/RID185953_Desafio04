@@ -17,5 +17,5 @@ export async function getImage(repoName: string): Promise<string> {
   }
 
   // fallback
-  return `https://raw.githubusercontent.com/FelipeFernandesr/${repoName}/main/public/imgProject.PNG`
+  return `/imageProject.svg`
 }
