@@ -13,12 +13,13 @@ const TitleProjects = styled.h2`
 `
 
 const RepoCard = styled.div`
-  width: 550px;
-  height: 700px;
+  width: 30vw;
+  height: 90vh;
   margin-top: ${pxToRem(24)};
-  padding: ${pxToRem(16)};
+  padding: ${pxToRem(25)};
   border: 1px solid #ccc;
   border-radius: ${pxToRem(8)};
+  border-radius: 50px 0;
 `
 const RepoName = styled.h3`
   font-weight: 600;
@@ -29,7 +30,17 @@ const RepoName = styled.h3`
 const DivProjetos = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2em;
+  gap: 8vw;
+  margin: ${pxToRem(93)} 0 0 6vw;
+`
+const DivCenter = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 81vh;
+`
+const ImgProject = styled.img`
+  width: 30vw;
 `
 
 function Projetos() {
@@ -58,10 +69,15 @@ function Projetos() {
         ) : (
           repos.map((repo) => (
             <RepoCard key={repo.id}>
-              <RepoName>{repo.name}</RepoName>
-
-              <p>{repo.description || 'sem descrição disponivel'}</p>
-              <small>⭐ {repo.stargazers_count}</small>
+              <DivCenter>
+                <ImgProject
+                  src={`https://raw.githubusercontent.com/FelipeFernandesr/${repo.name}/main/public/imgProject.png`}
+                  alt="Imagem do projeto"
+                />
+                <RepoName>{repo.name}</RepoName>
+                <p>{repo.description || 'sem descrição disponivel'}</p>
+              </DivCenter>
+              {/*<small>⭐ {repo.stargazers_count}</small>*/}
               <StyledButton
                 style={{
                   width: pxToRem(200),
