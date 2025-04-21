@@ -71,7 +71,7 @@ function Projetos() {
             <RepoCard key={repo.id}>
               <DivCenter>
                 <ImgProject
-                  src={`https://raw.githubusercontent.com/FelipeFernandesr/${repo.name}/main/public/imgProject.png`}
+                  src={`https://raw.githubusercontent.com/FelipeFernandesr/${repo.name}/dev/public/imgProject.PNG`}
                   alt="Imagem do projeto"
                 />
                 <RepoName>{repo.name}</RepoName>
