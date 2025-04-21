@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { pxToRem } from '@/utils'
 import { StyledDiv } from './StyledDiv'
 import { StyledButton } from './StyledButton'
+import { Repo } from '@/types'
 
 const TitleProjects = styled.h2`
   font-weight: 600;
@@ -30,14 +31,6 @@ const DivProjetos = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 2em;
 `
-//Tipagem para repos
-interface Repo {
-  id: number
-  name: string
-  description: string | null
-  stargazers_count: number
-  html_url: string
-}
 
 function Projetos() {
   const [repos, setRepos] = useState<Repo[]>([])
