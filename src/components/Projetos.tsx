@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { pxToRem } from '@/utils'
+import { getImage, pxToRem } from '@/utils'
 import { StyledDiv } from './StyledDiv'
 import { StyledButton } from './StyledButton'
 import { Repo } from '@/types'
@@ -41,6 +41,7 @@ const DivCenter = styled.div`
 `
 const ImgProject = styled.img`
   width: 30vw;
+  border-radius: ${pxToRem(8)};
 `
 
 function Projetos() {
@@ -60,6 +61,32 @@ function Projetos() {
       })
   }, [])
 
+  useEffect(() => {
+    async function fetchRepos() {
+      try {
+        const res = await fetch(
+          'https://api.github.com/users/FelipeFernandesr/repos'
+        )
+        const data = await res.json()
+
+        const reposComImagens = await Promise.all(
+          data.map(async (repo: Repo) => {
+            const imageUrl = await getImage(repo.name)
+            return { ...repo, imageUrl }
+          })
+        )
+
+        setRepos(reposComImagens)
+      } catch (err) {
+        console.error('Erro ao buscar repositórios:', err)
+      } finally {
+        setCarregando(false)
+      }
+    }
+
+    fetchRepos()
+  }, [])
+
   return (
     <StyledDiv>
       <TitleProjects>Projetos</TitleProjects>
@@ -70,10 +97,7 @@ function Projetos() {
           repos.map((repo) => (
             <RepoCard key={repo.id}>
               <DivCenter>
-                <ImgProject
-                  src={`https://raw.githubusercontent.com/FelipeFernandesr/${repo.name}/dev/public/imgProject.PNG`}
-                  alt="Imagem do projeto"
-                />
+                <ImgProject src={repo.imageUrl} alt="Imagem do projeto" />
                 <RepoName>{repo.name}</RepoName>
                 <p>{repo.description || 'sem descrição disponivel'}</p>
               </DivCenter>
