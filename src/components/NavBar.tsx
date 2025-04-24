@@ -63,10 +63,6 @@ const CenterLogos = styled.div`
       transform: scale(1.1); /* Pequeno zoom ao passar o mouse (opcional) */
     }*/
   }
-  
-  @media screen and (max-width: 768px) {
-    
-  }
 `
 
 const ImgLogo = styled.img`
