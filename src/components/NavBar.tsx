@@ -92,14 +92,14 @@ function NavBar() {
           </NavItem>
         </NavList>
         <CenterLogos>
+          <NavLink href="https://github.com/FelipeFernandesr" target="_blank">
+            <ImgLogo src={gitLogo} alt="" />
+          </NavLink>
           <NavLink
             href="https://www.linkedin.com/in/felipefernandesr/"
             target="_blank"
           >
             <ImgLogo src={inLogo} alt="" />
-          </NavLink>
-          <NavLink href="https://github.com/FelipeFernandesr" target="_blank">
-            <ImgLogo src={gitLogo} alt="" />
           </NavLink>
         </CenterLogos>
       </Nav>
