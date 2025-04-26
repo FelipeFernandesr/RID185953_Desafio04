@@ -1,10 +1,12 @@
-import { NavBar } from '@/components'
+import { Footer, NavBar, Sobre, Tech } from '@/components'
 
 function Tecnologies() {
   return (
     <>
       <NavBar />
-      <h1>Tecnologias</h1>
+      <Tech />
+      <Sobre />
+      <Footer />
     </>
   )
 }
