@@ -13,8 +13,10 @@ const TitleProjects = styled.h2`
 `
 
 const RepoCard = styled.div`
-  width: 30vw;
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 50vh;
   margin-top: ${pxToRem(24)};
   padding: ${pxToRem(25)};
   border: 1px solid #ccc;
@@ -23,7 +25,7 @@ const RepoCard = styled.div`
 `
 const RepoName = styled.h3`
   font-weight: 600;
-  font-size: 36px;
+  font-size: ${pxToRem(30)};
   text-align: center;
 `
 
@@ -37,10 +39,12 @@ const DivCenter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 81vh;
+  height: 45vh;
 `
 const ImgProject = styled.img`
-  width: 30vw;
+  width: 25vw;
+  height: 20vh;
+  object-fit: cover;
   border-radius: ${pxToRem(8)};
 `
 
