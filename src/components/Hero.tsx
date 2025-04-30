@@ -20,10 +20,10 @@ const TextHero = styled.p`
 function Hero() {
   return (
     <StyledDiv>
-      <TitleHero>Lorem ipsum dolor sit amet</TitleHero>
+      <TitleHero>Bem-vindo ao meu portfólio!</TitleHero>
       <TextHero>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Sou Felipe, desenvolvedor React, apaixonado por transformar ideias em
+        interfaces intuitivas.
       </TextHero>
       <StyledButton children={'Saiba mais...'} />
     </StyledDiv>

@@ -50,10 +50,16 @@ function Footer() {
           <a href="https://github.com/FelipeFernandesr">
             <ImgLogo src={gitLogo} />
           </a>
-          <a href="https://www.linkedin.com/in/felipefernandesr/">
+          <a
+            href="https://www.linkedin.com/in/felipefernandesr/"
+            target="_blank"
+          >
             <ImgLogo src={inLogo} />
           </a>
-          <a href="https://www.figma.com/files/team/1411155321952021840/all-projects?fuid=1411155320225249216">
+          <a
+            href="https://www.figma.com/files/team/1411155321952021840/all-projects?fuid=1411155320225249216"
+            target="_blank"
+          >
             <ImgLogo
               style={{ width: '40px', height: `${pxToRem(57)}` }}
               src={figma}
