@@ -51,6 +51,7 @@ const Date = styled.h3`
 const Text = styled.p`
   font-size: ${pxToRem(28)};
   line-height: 100%;
+  align-items: flex-end;
 `
 
 const GridItem = styled.div`
@@ -68,20 +69,23 @@ function Sobre() {
       <TitleSobre>Sobre mim</TitleSobre>
       <TimelineWrapper>
         <GridItem>
-          <Date>2020</Date>
-          <Text>Início dos estudos</Text>
+          <Date>2019</Date>
+          <Text>Me formei em Análise e Desenvolvimento de Sistemas</Text>
         </GridItem>
         <GridItem>
-          <Date>2020</Date>
-          <Text>Início dos estudos</Text>
+          <Date>2022</Date>
+          <Text>
+            Iniciei um curso de desenvolvimento web front-end voltado para
+            linguagem PHP.
+          </Text>
         </GridItem>
         <GridItem>
-          <Date>2020</Date>
-          <Text>Início dos estudos</Text>
+          <Date>2024</Date>
+          <Text>Entrei na formação de Tecnologia da escola DNC.</Text>
         </GridItem>
         <GridItem>
-          <Date>2020</Date>
-          <Text>Início dos estudos</Text>
+          <Date>2024</Date>
+          <Text>Meu primeiro freelancer.</Text>
         </GridItem>
 
         <TimelineBar />
