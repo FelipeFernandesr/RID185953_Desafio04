@@ -11,14 +11,14 @@ const TimelineWrapper = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: ${pxToRem(10)};
   height: ${pxToRem(430)};
   margin: ${pxToRem(60)} 0;
 `
 
 const TimelineBar = styled.div`
-  position: absolute;
+  position: relative;
   align-items: center;
   width: 59vw;
   margin: auto;
@@ -41,7 +41,7 @@ const Point = styled.div<{ left: string }>`
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 0 0 3px #fff;
-  z-index: 1;
+  z-index: 3;
 `
 const Date = styled.h3`
   font-weight: 600;
@@ -54,46 +54,75 @@ const Text = styled.p`
   align-items: flex-end;
 `
 
+const DivLine = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+`
+
 const GridItem = styled.div`
   width: 25%;
-  display: flex;
   justify-content: center;
-  gap: ${pxToRem(55)};
-  flex-direction: column;
+  gap: ${pxToRem(60)};
   text-align: center;
 `
+
+const TimelineContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: ${pxToRem(50)};
+  margin: ${pxToRem(20)} 0;
+`
+
+const sobreTexts = [
+  {
+    ano: '2019',
+    descricao: 'Me formei em Análise e Desenvolvimento de Sistemas',
+  },
+  {
+    ano: '2022',
+    descricao:
+      'Iniciei um curso de desenvolvimento web front-end voltado para linguagem PHP',
+  },
+  {
+    ano: '2024',
+    descricao: 'Entrei na formação de Tecnologia da escola DNC.',
+  },
+  {
+    ano: '2024',
+    descricao: 'Meu primeiro freelancer.',
+  },
+]
 
 function Sobre() {
   return (
     <StyledDiv id="sobre-mim">
       <TitleSobre>Sobre mim</TitleSobre>
       <TimelineWrapper>
-        <GridItem>
-          <Date>2019</Date>
-          <Text>Me formei em Análise e Desenvolvimento de Sistemas</Text>
-        </GridItem>
-        <GridItem>
-          <Date>2022</Date>
-          <Text>
-            Iniciei um curso de desenvolvimento web front-end voltado para
-            linguagem PHP.
-          </Text>
-        </GridItem>
-        <GridItem>
-          <Date>2024</Date>
-          <Text>Entrei na formação de Tecnologia da escola DNC.</Text>
-        </GridItem>
-        <GridItem>
-          <Date>2024</Date>
-          <Text>Meu primeiro freelancer.</Text>
-        </GridItem>
-
-        <TimelineBar />
-        {/* Bolinhas e Labels estáticos */}
-        <Point left="13%" />
-        <Point left="38%" />
-        <Point left="63%" />
-        <Point left="88%" />
+        <DivLine>
+          {sobreTexts.map((item, index) => (
+            <GridItem key={index}>
+              <Date>{item.ano}</Date>
+            </GridItem>
+          ))}
+        </DivLine>
+        <DivLine>
+          <TimelineContainer>
+            <TimelineBar />
+            <Point left="13%" />
+            <Point left="38%" />
+            <Point left="63%" />
+            <Point left="88%" />
+          </TimelineContainer>
+        </DivLine>
+        <DivLine>
+          {sobreTexts.map((item, index) => (
+            <GridItem key={index}>
+              <Text>{item.descricao}</Text>
+            </GridItem>
+          ))}
+        </DivLine>
       </TimelineWrapper>
     </StyledDiv>
   )
