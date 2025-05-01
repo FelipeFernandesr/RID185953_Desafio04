@@ -1,0 +1,8 @@
+export { default as NavBar } from './NavBar'
+export { StyledButton } from './StyledButton'
+export { StyledDiv } from './StyledDiv'
+export { default as Hero } from './Hero'
+export { default as Projetos } from './Projetos'
+export { default as Sobre } from './Sobre'
+export { default as Footer } from './Footer'
+export { default as Tech } from './Tech'
