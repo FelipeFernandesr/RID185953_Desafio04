@@ -47,7 +47,7 @@ function Footer() {
           </Contato>
         </DivContato>
         <Logo>
-          <a href="https://github.com/FelipeFernandesr">
+          <a href="https://github.com/FelipeFernandesr" target="_blank">
             <ImgLogo src={gitLogo} />
           </a>
           <a
