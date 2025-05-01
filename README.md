@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# 💼 Portfólio com React Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém meu portfólio de desenvolvedor, criado com [React/Next.js/TypeScript/etc.], onde apresento meus projetos, experiências e habilidades na área de tecnologia.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Styled Components
+- ESLint + Prettier
+- Vite (ou CRA, Next.js...)
+- Husky para Git hooks
+- Deploy com Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Template do figma escolhido
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Template 02 do figma
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🖼️ Seções do Portfólio
+
+- **Sobre mim:** Linha do tempo com marcos importantes da minha trajetória.
+- **Projetos:** Cards com os projetos desenvolvidos e botão com links para o projeto no github.
+  Os projetos são listados usando a api do github.
+- **Técnologias:** Tecnologias que domino ou tenho familiaridade.
+
+---
+
+## 🌐 Deploy
+
+Acesse a versão online do portfólio: [https://rid-185953-desafi-git-1fbcaf-felipe-fernandes-projects-c85b3bd7.vercel.app/](https://rid-185953-desafi-git-1fbcaf-felipe-fernandes-projects-c85b3bd7.vercel.app/)
+
+---
+
+## 🛠️ Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/FelipeFernandesr/RID185953_Desafio04.git
+
+# Acesse a pasta
+cd portfolio
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+
 ```
