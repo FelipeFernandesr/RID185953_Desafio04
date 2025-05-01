@@ -16,7 +16,7 @@ const RepoCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 25vw;
-  height: 50vh;
+  height: 54vh;
   margin-top: ${pxToRem(24)};
   padding: ${pxToRem(25)};
   border: 1px solid #ccc;
