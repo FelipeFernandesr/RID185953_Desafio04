@@ -93,7 +93,7 @@ function Projetos() {
 
   return (
     <StyledDiv>
-      <TitleProjects>Projetos</TitleProjects>
+      <TitleProjects id="projetos">Projetos</TitleProjects>
       <DivProjetos>
         {carregando ? (
           <p>Carregando projetos...</p>

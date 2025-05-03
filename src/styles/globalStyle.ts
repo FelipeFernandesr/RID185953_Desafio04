@@ -3,6 +3,7 @@ import { Theme } from '@/types'
 
 export const GlobalStyle = createGlobalStyle<{ theme?: Theme }>`
     body, html {
+        scroll-behavior: smooth;
         background: ${(props) => props.theme.appBackground};
         color: ${(props) => props.theme.appColor};
         margin: 0;
