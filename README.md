@@ -33,7 +33,7 @@ Este repositório contém meu portfólio de desenvolvedor, criado com [React/Nex
 
 ## 🌐 Deploy
 
-Acesse a versão online do portfólio: [https://rid-185953-desafi-git-1fbcaf-felipe-fernandes-projects-c85b3bd7.vercel.app/](https://rid-185953-desafi-git-1fbcaf-felipe-fernandes-projects-c85b3bd7.vercel.app/)
+Acesse a versão online do portfólio: https://rid-185953-desafio04.vercel.app/
 
 ---
 
