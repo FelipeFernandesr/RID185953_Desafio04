@@ -25,7 +25,9 @@ function Hero() {
         Sou Felipe, desenvolvedor React, apaixonado por transformar ideias em
         interfaces intuitivas.
       </TextHero>
-      <StyledButton children={'Saiba mais...'} />
+      <a href="#projetos">
+        <StyledButton children={'Saiba mais...'} />
+      </a>
     </StyledDiv>
   )
 }
