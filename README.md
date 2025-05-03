@@ -33,7 +33,8 @@ Este repositório contém meu portfólio de desenvolvedor, criado com [React/Nex
 
 ## 🌐 Deploy
 
-Acesse a versão online do portfólio: https://rid-185953-desafio04.vercel.app/
+<a href="https://rid-185953-desafio04.vercel.app/" target="_blank">Acesse a versão online do portfólio</a>
+
 
 ---
 
